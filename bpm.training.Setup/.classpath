@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" output="test-classes" path="test"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/gwt-material"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hibernate/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hibernate/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hibernate/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hibernate/hibernate-commons-annotations-5.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hibernate/hibernate-core-5.0.1.Final.jar" sourcepath="C:/Users/Adrian/.m2/repository/org/hibernate/hibernate-core/5.0.1.Final/hibernate-core-5.0.1.Final-sources.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hibernate/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hibernate/jandex-1.2.2.Final.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hibernate/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hibernate/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hibernate/mysql-connector-java-5.1.36-bin.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

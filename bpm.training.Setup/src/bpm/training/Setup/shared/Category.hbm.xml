@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 14, 2015 10:37:28 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="bpm.training.Setup.shared.Category" table="category_table">
+        <id name="id" type="long">
+            <column name="cat_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="picture" >
+            <column name="url_picture" />
+        </property>
+        <property name="name" >
+            <column name="cat_name" />
+        </property>
+        <property name="color">
+            <column name="cat_color" />
+        </property>
+        <property name="txtColor" >
+            <column name="cat_txt_color" />
+        </property>
+    </class>
+</hibernate-mapping>

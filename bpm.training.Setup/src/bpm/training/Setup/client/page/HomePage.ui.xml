@@ -1,0 +1,113 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:m="urn:import:gwt.material.design.client.ui"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+		
+	<ui:style>
+		.title{
+			color: red !important;
+  			text-shadow: 10px 10px rgba(0,0,0,0.2);
+		}
+	</ui:style>
+		
+	<m:MaterialPanel>
+	    <!-- Nav Bar -->
+	    <m:MaterialNavBar backgroundColor="blue" sideBar="mysidebar" type="fixed">
+		    <m:MaterialNavBrand addStyleNames="{style.title}">Test</m:MaterialNavBrand>
+		    <m:MaterialNavSection align="right">
+		        <m:MaterialLink ui:field="logIn" icon="mdi-social-whatshot" iconPosition="left" text="Log in" textColor="white"/>
+		        <m:MaterialLink icon="mdi-social-whatshot" iconPosition="left" text="Log in" textColor="white"/>
+		        <m:MaterialLink icon="mdi-social-whatshot" iconPosition="left" text="Log in" textColor="white"/>
+		    </m:MaterialNavSection>
+		</m:MaterialNavBar>
+
+	    <!-- Side Nav -->
+	    <m:MaterialSideNav width="300" name="mysidebar"  type="close" closeOnClick="true">
+		    <m:MaterialTopNav profileName="GWT Material" profileImageUrl="http://b.vimeocdn.com/ps/339/488/3394886_300.jpg" url="http://2.bp.blogspot.com/-x4D3EPELYRU/VMHu52a4qUI/AAAAAAAAHek/EmnIgqTtu_U/s0/fon116%2B2160x1920.png" ui:field="topNav" textColor="white" type="sidebar" >
+		        <m:child>
+		            <m:MaterialLink text="gwt-material@gmail.com" textColor="white" fontSize="0.8" icon="mdi-navigation-arrow-drop-down" iconPosition="right"/>
+		        </m:child>
+		    </m:MaterialTopNav>
+		    <m:MaterialLink icon="mdi-content-inbox" iconPosition="left" textColor="blue"  text="Inbox" />
+		    <m:MaterialLink icon="mdi-action-stars" iconPosition="left" textColor="blue"  text="Starred" />
+		    <m:MaterialLink icon="mdi-content-send" iconPosition="left" textColor="blue"  text="Sent Mail" />
+		    <m:MaterialLink icon="mdi-content-drafts" iconPosition="left" textColor="blue"  text="Drafts" />
+		    <m:MaterialLink icon="mdi-content-markunread" iconPosition="left" textColor="blue"  text="All Mail" />
+		</m:MaterialSideNav>
+		
+	    <!-- Content -->
+	    <m:MaterialContainer ui:field="conMain" addStyleNames="center-align" >
+	        
+		    <m:MaterialTabs color="blue" textColor="white" indicatorColor="yellow" waves="yellow" >
+				<m:tab><g:Label text="Simple Calculator" /></m:tab>
+				<m:tab><g:Label text="sample" /></m:tab>
+				<m:tab><g:Label text="sample" /></m:tab>
+				
+				<m:content>
+					<m:MaterialPanel addStyleNames="center-align">
+				    <m:MaterialTitle title="This is simple calculator" description="Simple Calculator"/>
+				        
+				        <m:MaterialRow>
+				            <m:MaterialColumn grid="s12 m6 l4" offset="m3">
+				           	    <m:MaterialRow>
+				           	        <m:MaterialTextArea placeholder="Write your comment here."></m:MaterialTextArea>
+				           	    </m:MaterialRow>
+				           	</m:MaterialColumn>
+				                  
+				            <m:MaterialColumn color="blue" grid="s12 m6 l4" offset="m3">
+				                <m:MaterialRow color="white">
+					                <m:MaterialTextBox ui:field="result"></m:MaterialTextBox>
+					            </m:MaterialRow>
+					            
+					            <m:MaterialRow>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnOne" text="1"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnTwo" text="2"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnThree" text="3"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnAdd" text="+"></m:MaterialButton>
+					            </m:MaterialRow>
+					           
+					            <m:MaterialRow>
+					                <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnFour" text="4"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnFive" text="5"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnSix" text="6"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnMinus" text="-"></m:MaterialButton>
+					            </m:MaterialRow>
+					            
+					            <m:MaterialRow>
+					                <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnSeven" text="7"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnEight" text="8"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnNine" text="9"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnMultiply" text="*"></m:MaterialButton>
+					            </m:MaterialRow>
+					            
+					            <m:MaterialRow>
+					                <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnClear" text="c"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnZero" text="0"></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnEquals" text="="></m:MaterialButton>
+						            <m:MaterialButton grid="s3 m3 l3" waves="light" textColor="white" type="flat" ui:field="btnDivide"  text="/"></m:MaterialButton>
+					            </m:MaterialRow>
+				            </m:MaterialColumn>
+				            
+				           	<m:MaterialColumn grid="s12 m6 l4" offset="m3">
+				           	    <m:MaterialRow>
+				           	        <m:MaterialTextArea placeholder="Write your comment here."></m:MaterialTextArea>
+				           	    </m:MaterialRow>
+				           	</m:MaterialColumn>  	
+				        </m:MaterialRow>
+				   
+				        <m:MaterialButton ui:field="btn" type="flat" color="blue" text="Click Me!"></m:MaterialButton>
+				        <m:MaterialButton ui:field="btnTest" type="flat"  color="blue" text="Test"></m:MaterialButton>
+				    </m:MaterialPanel>
+				</m:content>
+			
+				<m:content>
+					<m:MaterialTopNav padding="5" title="Sample 2" description="This is sample 2" color="blue" textColor="white" />
+				</m:content>
+				
+				<m:content>
+					<m:MaterialTopNav padding="5"  title="Sample 3" description="This is sample 3"  color="blue" textColor="white" />
+				</m:content>
+			</m:MaterialTabs>
+	    </m:MaterialContainer>	    
+	</m:MaterialPanel>
+</ui:UiBinder> 

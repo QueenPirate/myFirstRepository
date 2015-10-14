@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 14, 2015 11:09:15 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="bpm.training.Setup.shared.Question" table="question_table">
+        <id name="id" >
+            <column name="question_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="question" >
+            <column name="question" />
+        </property>
+        <property name="answer" >
+            <column name="correct_answer" />
+        </property>
+        <property name="categoryId" >
+            <column name="cat_id" />
+        </property>
+        <property name="point" >
+            <column name="points" />
+        </property>
+    </class>
+</hibernate-mapping>

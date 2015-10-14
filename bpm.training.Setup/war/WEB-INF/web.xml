@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>bpm.training.Setup.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/bpm_training_setup/greet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- User servlet -->
+  
+   <servlet>
+    <servlet-name>userServlet</servlet-name>
+    <servlet-class>bpm.training.Setup.server.UserServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>userServlet</servlet-name>
+    <url-pattern>/bpm_training_setup/user</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- 	Category servlet  -->
+  
+  <servlet>
+    <servlet-name>categoryServlet</servlet-name>
+    <servlet-class>bpm.training.Setup.server.CategoryServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>categoryServlet</servlet-name>
+    <url-pattern>/bpm_training_setup/category</url-pattern>
+  </servlet-mapping> 
+  
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Bpm_training_Setup.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

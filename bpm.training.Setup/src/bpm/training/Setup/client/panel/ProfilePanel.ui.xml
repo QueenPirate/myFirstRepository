@@ -1,0 +1,40 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:m="urn:import:gwt.material.design.client.ui"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.title{
+			background: #29b6f6;
+			margin-left: -11px;
+  			margin-right: -11px;
+  			padding: 15px;
+  			font-size: x-large;
+		}
+		.mainPanel{
+			padding-bottom: 400px;
+		}
+		.colBtn{
+			margin-top: 156px;
+		}
+		.txtBox{
+			Color: #fff;
+		}
+	
+	</ui:style>
+	<m:MaterialPanel>
+	        <m:MaterialRow>
+	            <m:MaterialColumn grid="s12 m6 l6" offset="m3 l3" shadow="1" >
+	                <m:MaterialPanel addStyleNames="{style.mainPanel}">
+	                    <m:MaterialLink addStyleNames="{style.title} left-align" text="Your Profile" textColor="white"  />
+	                    	<m:MaterialColumn grid="s12 m4 l7">
+	                    		<m:MaterialTextBox ui:field="lblFirstName" addStyleNames="{style.txtBox}" placeholder="First Name"  />
+	                    		<m:MaterialTextBox ui:field="lblLastI" addStyleNames="{style.txtBox}"  placeholder="Last Initial"  />
+	                    	</m:MaterialColumn>
+	                    	<m:MaterialColumn addStyleNames="{style.colBtn}" grid="s12 m4 l2" offset="l9">
+	                    	    <m:MaterialButton type="floating" waves="light" size="large" color="blue" icon="mdi-action-done" />
+	                    	</m:MaterialColumn> 
+	                </m:MaterialPanel>
+	            </m:MaterialColumn>
+	        </m:MaterialRow>
+	</m:MaterialPanel>
+</ui:UiBinder> 

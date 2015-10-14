@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:m="urn:import:gwt.material.design.client.ui"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.mainRow{  
+			background: white;
+ 	 		text-align: center;
+			height: 484px;
+  			margin-top: -49px;
+			width: 570px;
+		}
+		.title{
+			padding-left: 26px;
+  			padding-right: 26px;
+  			padding-top: 10px;
+  			padding-bottom: 10px;
+		}
+		.colChoices{
+			padding-top: 28px !important;
+  			padding-left: 23px !important;
+		}
+		
+	</ui:style>
+	<m:MaterialColumn addStyleNames="{style.mainRow}" grid="s12 m12 l12" >
+	     	<m:MaterialLink fontSize="1.5" ui:field="lblTitle" addStyleNames="{style.title} darker"/>
+	     	<m:MaterialColumn    ui:field="colChoices" addStyleNames="{style.colChoices} left-align" />
+	     	
+	</m:MaterialColumn>
+</ui:UiBinder> 

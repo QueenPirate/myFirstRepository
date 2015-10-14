@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:m="urn:import:gwt.material.design.client.ui"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res'
+	    type='bpm.training.Setup.client.resources.IProjectResource' />
+    
+	<ui:style>
+
+	</ui:style>
+	<g:HTMLPanel>
+		<m:MaterialModalContent>
+		    <m:MaterialTitle title="Signup User" description="Please enter your user information."/>
+		    <m:MaterialImage resource="{res.img_google_logo}" />
+			<m:MaterialRow>
+	           <m:MaterialTextBox ui:field="lblFirstName" grid = "s12 m6 l6" placeholder="First Name"></m:MaterialTextBox>
+	           <m:MaterialTextBox ui:field="lblLastName" grid = "s12 m6 l6" placeholder="Last Name"></m:MaterialTextBox>
+	        </m:MaterialRow>
+	        <m:MaterialRow>
+	            <m:MaterialTextBox ui:field="lblEmailAdd" type="email" grid="s12 m12 l12" placeholder="Email Address"></m:MaterialTextBox>
+	        </m:MaterialRow>
+	        <m:MaterialRow>
+	            <m:MaterialDatePicker ui:field="dpBirthDate" grid = "s12 m6 l6" placeholder="Birth date" selectionType="YEAR" />
+	            <m:MaterialListBox ui:field="lbCountry" grid = "s12 m6 l6" >
+	                <item>Select Country</item>
+					<item>Japan</item>
+					<item>Philippines</item>
+					<item>Singapore</item>
+				</m:MaterialListBox>
+	        </m:MaterialRow>
+	        <m:MaterialRow>
+	           <m:MaterialTextBox ui:field="lblFirstPassword" grid="s12 m6 l6"  type="password" placeholder="Password" />
+	           <m:MaterialTextBox ui:field="lblSecondPassword" grid="s12 m6 l6"  type="password" placeholder="Re-type Password" />
+	        </m:MaterialRow>
+	        
+		</m:MaterialModalContent>
+				
+		<m:MaterialModalFooter align="right">
+			<m:MaterialButton ui:field="btnAgree" waves="green" type="flat" text="Agree" />
+			<m:MaterialButton ui:field="btnDisagree" waves="red" type="flat" text="Disagree" />
+		</m:MaterialModalFooter>
+	</g:HTMLPanel>
+</ui:UiBinder> 
