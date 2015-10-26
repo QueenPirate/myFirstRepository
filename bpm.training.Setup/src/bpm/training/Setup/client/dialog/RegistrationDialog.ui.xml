@@ -36,8 +36,8 @@
 		</m:MaterialModalContent>
 				
 		<m:MaterialModalFooter align="right">
-			<m:MaterialButton ui:field="btnAgree" waves="green" type="flat" text="Agree" />
-			<m:MaterialButton ui:field="btnDisagree" waves="red" type="flat" text="Disagree" />
+			<m:MaterialButton ui:field="btnAgree" waves="green" type="FLAT" text="Agree" />
+			<m:MaterialButton ui:field="btnDisagree" waves="red" type="FLAT" text="Disagree" />
 		</m:MaterialModalFooter>
 	</g:HTMLPanel>
 </ui:UiBinder> 

@@ -31,7 +31,7 @@
 	                    		<m:MaterialTextBox ui:field="lblLastI" addStyleNames="{style.txtBox}"  placeholder="Last Initial"  />
 	                    	</m:MaterialColumn>
 	                    	<m:MaterialColumn addStyleNames="{style.colBtn}" grid="s12 m4 l2" offset="l9">
-	                    	    <m:MaterialButton type="floating" waves="light" size="large" color="blue" icon="mdi-action-done" />
+	                    	    <m:MaterialButton type="FLOATING" waves="light" size="large" backgroundColor="blue" icon="done" />
 	                    	</m:MaterialColumn> 
 	                </m:MaterialPanel>
 	            </m:MaterialColumn>

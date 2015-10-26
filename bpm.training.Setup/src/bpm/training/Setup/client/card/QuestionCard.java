@@ -43,7 +43,6 @@ public class QuestionCard extends Composite {
 		lblTitle.addStyleName(cat.getColor());
 		lblTitle.setTextColor(cat.gettxtColor());
 		
-		
 		for(Choice s : question.getChoices()){
 			
 			String choice;
@@ -69,6 +68,8 @@ public class QuestionCard extends Composite {
 			
 			i++;
 		}
+		
+		
 		
 	}
 

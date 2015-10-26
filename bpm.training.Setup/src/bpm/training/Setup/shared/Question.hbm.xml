@@ -4,9 +4,9 @@
 <!-- Generated Oct 14, 2015 11:09:15 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="bpm.training.Setup.shared.Question" table="question_table">
-        <id name="id" >
+        <id name="id" type="long">
             <column name="question_id" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <property name="question" >
             <column name="question" />

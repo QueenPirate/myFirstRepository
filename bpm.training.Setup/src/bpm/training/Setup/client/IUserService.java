@@ -1,5 +1,7 @@
 package bpm.training.Setup.client;
 
+import java.util.List;
+
 import bpm.training.Setup.shared.User;
 
 import com.google.gwt.core.client.GWT;
@@ -24,4 +26,5 @@ public interface IUserService extends RemoteService{
 	 
 	 void createUser(User user) throws Exception;
 	 User getUser(User user) throws Exception;
+	 List<User> getAllUsers() throws Exception;
 }

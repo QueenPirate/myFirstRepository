@@ -6,7 +6,7 @@
     <class name="bpm.training.Setup.shared.Choice" table="choice_table">
         <id name="id" >
             <column name="choice_id" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <property name="choice" >
             <column name="choice" />

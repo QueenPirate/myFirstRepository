@@ -10,11 +10,27 @@ public class Choice implements Serializable {
 	private String choice;
 	private long question_id;
 	
+	
+	public Choice() {
+		super();
+	}
+
+	public Choice(String choice, long question_id) {
+		super();
+		this.choice = choice;
+		this.question_id = question_id;
+	}
+
 	public Choice(long id, String choice, long question_id) {
 		super();
 		this.id = id;
 		this.choice = choice;
 		this.question_id = question_id;
+	}
+
+	public Choice(String choice) {
+		super();
+		this.choice = choice;
 	}
 
 	public long getId() {

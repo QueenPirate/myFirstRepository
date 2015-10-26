@@ -1,6 +1,8 @@
 
 package bpm.training.Setup.server;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import bpm.training.Setup.client.IUserService;
@@ -33,6 +35,11 @@ public class UserServiceImpl extends RemoteServiceServlet implements IUserServic
 		user = userdao.getUser(user);
 		setUserInSession(user);
 		return user;
+	}
+	@Override
+	public List<User> getAllUsers() throws Exception {
+		return userdao.getAllUsers();
+		
 	}
 
 }

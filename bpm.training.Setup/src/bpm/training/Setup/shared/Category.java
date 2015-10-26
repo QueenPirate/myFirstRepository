@@ -29,6 +29,14 @@ public class Category implements Serializable {
 		this.txtColor = txtColor;
 	}
 	
+	public Category(String picture, String name, String color, String txtColor) {
+		super();
+		this.picture = picture;
+		this.name = name;
+		this.color = color;
+		this.txtColor = txtColor;
+	}
+
 	public String getPicture() {
 		return picture;
 	}

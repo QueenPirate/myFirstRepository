@@ -7,7 +7,7 @@
 			.panel{
 				padding-top: 10px;
 				background: #455a64 ;
-				height: 100%;
+  				height: inherit;
 			}
 			.navBar{
 				margin-top: -10px;
@@ -37,28 +37,33 @@
 	</ui:style>
 	<m:MaterialPanel addStyleNames="{style.panel}">
 	    <!-- Nav Bar -->
-	    <m:MaterialNavBar addStyleNames="{style.navBar}" backgroundColor="#29b6f6" sideBar="mysidebar" type="fixed">
+	    <m:MaterialNavBar addStyleNames="{style.navBar}" backgroundColor="#29b6f6" sideBar="mysidebar" type="FIXED">
 		    <m:MaterialNavBrand ui:field="nbTitle" addStyleNames="{style.title}" />
 		    <m:MaterialNavSection align="right">
-		        <m:MaterialLink icon="mdi-navigation-refresh" text="Refresh" iconPosition="left" textColor="white"/>
-		        <m:MaterialLink ui:field="btnLogOut" icon="mdi-action-exit-to-app" text="Log out" iconPosition="left"  textColor="white"/>
+		        <m:MaterialLink icon="refresh" text="Refresh" iconPosition="left" textColor="white"/>
+		        <m:MaterialLink ui:field="btnLogOut" icon="exit_to_app" text="Log out" iconPosition="left"  textColor="white"/>
 		    </m:MaterialNavSection>
 		</m:MaterialNavBar>
 
 	    <!-- Side Nav -->
-	    <m:MaterialSideNav width="300" name="mysidebar"  type="close" closeOnClick="true">
+	    <m:MaterialSideNav width="300" name="mysidebar"  type="CLOSE" closeOnClick="true">
 		    <m:MaterialTopNav profileName="GWT Material" profileImageUrl="http://b.vimeocdn.com/ps/339/488/3394886_300.jpg" url="http://2.bp.blogspot.com/-x4D3EPELYRU/VMHu52a4qUI/AAAAAAAAHek/EmnIgqTtu_U/s0/fon116%2B2160x1920.png" ui:field="topNav" textColor="white" type="sidebar" >
 		        <m:child>
-		            <m:MaterialLink text="gwt-material@gmail.com" textColor="white" fontSize="0.8" icon="mdi-navigation-arrow-drop-down" iconPosition="right"/>
+		            <m:MaterialLink text="gwt-material@gmail.com" textColor="white" fontSize="0.8" icon="arrow_drop_down" iconPosition="right"/>
 		        </m:child>
 		    </m:MaterialTopNav>
-		    <m:MaterialLink ui:field="linkQuiz" icon="mdi-device-dvr" iconPosition="left" textColor="blue"  text="Quiz" />
-		    <m:MaterialLink ui:field="linkLeaderboard" icon="mdi-social-poll" iconPosition="left" textColor="blue"  text="Leaderboard" />
-		    <m:MaterialLink ui:field="linkProfile" icon="mdi-action-account-box" iconPosition="left" textColor="blue"  text="Profile" />
+		     <m:MaterialLink ui:field="linkQuiz" icon="view_module" iconPosition="left" textColor="blue"  text="Quiz" />
+		    <m:MaterialLink ui:field="linkLeaderboard" icon="poll" iconPosition="left" textColor="blue"  text="Leaderboard" />
+		    <m:MaterialLink ui:field="linkProfile" icon="account_box" iconPosition="left" textColor="blue"  text="Profile" />
+		    <m:MaterialLink ui:field="linkSettings" icon="settings" iconPosition="left" textColor="blue"  text="Settings" />
 		</m:MaterialSideNav>
 	    
 	    <m:MaterialContainer ui:field="conMain" >
 	        <m:MaterialRow ui:field="rowCards" />
+	        <m:MaterialFloatingContainer>
+				<m:initial><m:MaterialButton ui:field="btnAddCategory" type="FLOATING" waves="light" size="large" backgroundColor="blue"  icon="add"/></m:initial>
+			</m:MaterialFloatingContainer>
 	    </m:MaterialContainer>
+	    
 	</m:MaterialPanel>
 </ui:UiBinder> 

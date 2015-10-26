@@ -42,4 +42,18 @@ public class UserDao {
 		 }
 		  
 	}
+	public List<User> getAllUsers() throws Exception {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		
+		@SuppressWarnings("unchecked")
+		List<User> users = session.createQuery("from User").list();
+		
+		if(users.isEmpty()){
+			throw new Exception("No Users");
+		}else{
+			return users;
+		}
+		
+	}
 }

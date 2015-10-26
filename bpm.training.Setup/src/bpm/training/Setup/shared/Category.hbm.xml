@@ -6,7 +6,7 @@
     <class name="bpm.training.Setup.shared.Category" table="category_table">
         <id name="id" type="long">
             <column name="cat_id" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <property name="picture" >
             <column name="url_picture" />

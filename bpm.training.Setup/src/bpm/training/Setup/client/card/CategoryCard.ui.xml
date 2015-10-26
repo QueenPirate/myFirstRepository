@@ -5,12 +5,11 @@
 	<ui:style>
 		@external category-active, category-inactive, category-start, pop-up-score; 
 		.cat-name{
-			height: 39px;
- 			padding: 0px 20px;
+			 height: 39px;
+ 			 width: 98%;
+  			padding: 0px 20px;
   			font-size: 15px;
-			padding-top: 10px;
-			margin-right: -11px;
-  			margin-left: -11px;
+  			padding-top: 10px;
 		}
 		.icon{
 			width: 100%;
@@ -58,21 +57,17 @@
   			right: 29%;
 		}
 		.arrow{
-			display: none;
+			display: none !important;
 		}
 		.startBtn{
 			display: none !important;
 		}
 		.btnDisplay{
-			bottom: -7px;
- 			position: absolute;
-  			width: 50%;
-  			left: 49%;
+			bottom: 4px;
+  			position: absolute;
+  			width: 23px;
+  			left: 81%;
   			font-size: 1.5em;
-  			padding: 10px;
- 			height: 50px;
-  			text-align: left;
-  			padding-left: 30px;
 		}
 		.category-active .btnDisplay{
 			display: none !important;
@@ -111,7 +106,7 @@
   			left: 450px;
 		}
 		.totalScore{
-			display: none;
+			display: none !important;
 		}
 		.category-start .totalScore{
 			display: block !important;
@@ -128,15 +123,23 @@
 		.lblPopUpScore{
 			padding-top: 45px;
 		}		
+		.btnAddQuestion{
+			bottom: 4px;
+  			position: absolute;
+  			width: 23px;
+  			left: 71%;
+  			font-size: 1.5em;
+		}
 
 	</ui:style>
-	<m:MaterialColumn ui:field="colCategory" grid="s12 m6 l3" color="lighten-3">
-	    <m:MaterialLink ui:field="btnBack" fontSize="3" textColor="black" icon="mdi-hardware-keyboard-backspace" addStyleNames="{style.arrow}"/>
-	    <m:MaterialButton ui:field="btnStart" type="floating" waves="light" size="large" color="blue" icon="mdi-av-play-arrow" addStyleNames="{style.startBtn}" />
+	<m:MaterialColumn ui:field="colCategory" grid="s12 m6 l2" addStyleNames="lighten-3">
+	    <m:MaterialLink ui:field="btnBack" fontSize="3" textColor="black" icon="keyboard_backspace" addStyleNames="{style.arrow}"/>
+	    <m:MaterialButton ui:field="btnStart" type="FLOATING" waves="light" size="large" backgroundColor="blue" icon="play_arrow" addStyleNames="{style.startBtn}" />
 		<m:MaterialImage ui:field="imgPicture" addStyleNames="{style.icon}"/>
-		<m:MaterialLink ui:field="lblIcon" textColor="white" icon="mdi-av-play-arrow" iconPosition="right" addStyleNames="{style.btnDisplay}" />
+		<m:MaterialLink ui:field="lblAddQuestion" textColor="white" size="tiny"  icon="mode_edit" iconPosition="right" addStyleNames="{style.btnAddQuestion}" />
+		<m:MaterialLink ui:field="lblIcon" textColor="white" icon="play_arrow" iconPosition="right" addStyleNames="{style.btnDisplay}" />
 		<m:MaterialLink ui:field="lblName" addStyleNames="{style.cat-name} darken" />
-		<m:MaterialButton ui:field="btnNext" type="floating" waves="light" size="large" color="red" icon="mdi-av-play-arrow" addStyleNames="{style.nextBtn}" />
+		<m:MaterialButton ui:field="btnNext" type="FLOATING" waves="light" size="large" backgroundColor="red" icon="play_arrow" addStyleNames="{style.nextBtn}" />
 		<m:MaterialColumn grid="s12 m6 l6" offset="m3 l3" ui:field="rowQuestions" addStyleNames="{style.rowQuestions}"/>
 		
 		
@@ -144,7 +147,7 @@
 		<m:MaterialLink fontSize="3" ui:field="lblTotalScore" textColor="black" addStyleNames="{style.totalScore}" />
 		<m:MaterialPanel ui:field="pnlScore" addStyleNames="{style.panelScore} darker">
 	     	    <m:MaterialLink fontSize="7" ui:field="lblScore" textColor="black" addStyleNames="{style.lblPopUpScore}"></m:MaterialLink>
-	     	</m:MaterialPanel>
+	    </m:MaterialPanel>
 	     
 	</m:MaterialColumn>
 	

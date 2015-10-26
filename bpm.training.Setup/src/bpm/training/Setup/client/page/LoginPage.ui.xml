@@ -34,14 +34,14 @@
 					<m:MaterialTitle title="Login" description="Please provide your account credentials."/>
 					<m:MaterialPanel padding="5" shadow="1" addStyleNames="{style.panel}">
 						<m:MaterialPanel addStyleNames="{style.fieldPanel}">
-							<m:MaterialImage url="http://b.vimeocdn.com/ps/339/488/3394886_300.jpg" type="circle" addStyleNames="{style.imgProfile} z-depth-1"/>
+							<m:MaterialImage url="http://b.vimeocdn.com/ps/339/488/3394886_300.jpg" type="CIRCLE" addStyleNames="{style.imgProfile} z-depth-1"/>
 							<m:MaterialTextBox ui:field="txtEmailAdd" type="email" placeholder="Email"/>
 							<m:MaterialTextBox ui:field="txtPassword" type="password" placeholder="Password" />
-							<m:MaterialButton ui:field="btnLogin" color="blue" waves="light" text="Log In" width="100%"/>
+							<m:MaterialButton ui:field="btnLogin" backgroundColor="blue" waves="light" text="Log In" width="100%"/>
 							
 							<m:MaterialRow addStyleNames="center-align">
 							    <m:MaterialColumn grid="s12 m12 l12">
-								   	<m:MaterialButton ui:field="btnSignUp" color="white" type="flat" text="Sign up for a new account" textColor="blue" ></m:MaterialButton>
+								   	<m:MaterialButton ui:field="btnSignUp" backgroundColor="white" type="FLAT" text="Sign up for a new account" textColor="blue" ></m:MaterialButton>
 								</m:MaterialColumn>
 							</m:MaterialRow>
 							

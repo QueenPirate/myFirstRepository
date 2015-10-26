@@ -30,6 +30,8 @@ public class LoginPage extends Composite {
 
 	public LoginPage() {
 		initWidget(uiBinder.createAndBindUi(this));
+		txtEmailAdd.setText("kristelle.banate@yahoo.com");
+		txtPassword.setText("123123123");
 	}
 
 	@UiField MaterialButton btnSignUp;
@@ -75,7 +77,6 @@ public class LoginPage extends Composite {
 						
 						@Override
 						public void onSuccess(User result) {
-							// TODO Auto-generated method stub
 								MaterialLoader.showLoading(false);
 								MaterialToast.alert("Success");
 								RootPanel.get().clear();

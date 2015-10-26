@@ -14,6 +14,11 @@
 	font-weight: normal;
 	color: rgba(0, 0, 0, 0.87);
 }
+/** Button **/
+button.btn-flat:focus {
+    outline: none;
+    background-color: inherit;
+}
 /** Errors **/
 .field-error, .field-error-picker input{
     border-bottom: 1px solid #F44336 !important;
@@ -168,6 +173,11 @@ li.multiValueSuggestBox-input-token {
     font-size: 16px;
     line-height: 32px;
     padding-left: 8px; 
+}
+.chip.disabled img{
+	filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
 
 /** Calendar **/
@@ -462,6 +472,7 @@ nav .nav-wrapper .side-nav i {
 }
 .side-nav i{
 	font-size: 2em !important;
+	line-height: inherit;
 }
 
 .side-nav .collapsible-header , .side-nav .collapsible-body{
@@ -495,6 +506,10 @@ nav .nav-wrapper .collapsible-body {
 	color: #fff;
 	background-color: #999;
 	text-align: center;
+}
+
+.collection .collection-item .secondary-content i{
+	margin-top: -5px;
 }
 
 ul.side-nav.fixed li:hover,ul.side-nav.fixed li.active {
@@ -565,11 +580,6 @@ div {
 	position: initial !important;
 	opacity: 0 !important;
 }
-
-.collection>li>div {
-	overflow: auto;
-}
-
 .collection>li>div>div:first-child {
 	float: left;
 }
@@ -668,6 +678,7 @@ html,body {
 }
 
 a:hover,a:visited {
+	color: none !important;
 	text-decoration: none !important;
 }
 
@@ -714,7 +725,7 @@ a:hover,a:visited {
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
-	color: #9F9F9F;
+	color: #9F9F9F !important;
 	cursor: default;
 }
 

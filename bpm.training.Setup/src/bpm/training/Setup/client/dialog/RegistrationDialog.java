@@ -113,9 +113,9 @@ public class RegistrationDialog extends Composite {
 			
 			@Override
 			public void onSuccess(Void result) {
-				MaterialLoader.showLoading(false);
 				MaterialToast.alert("Success");
 				MaterialModal.closeModal();
+				MaterialLoader.showLoading(false);
 			}
 			
 			@Override

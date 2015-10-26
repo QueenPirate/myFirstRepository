@@ -18,10 +18,41 @@ public class Question implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	
+	public Question(String question,int answer, double point) {
+		super();
+		this.question = question;
+		this.answer = answer;
+		this.point = point;
+	}
+
+
+
+	public Question(String question, int answer,
+			long categoryId, double point) {
+		super();
+		this.question = question;
+		this.answer = answer;
+		this.categoryId = categoryId;
+		this.point = point;
+	}
+
+
+
 	public Question(String question, List<Choice> choices, int answer, long categoryId, double point) {
 		super();
 		this.question = question;
 		this.choices = choices;
+		this.answer = answer;
+		this.categoryId = categoryId;
+		this.point = point;
+	}
+
+	public Question(long id, String question, int answer, long categoryId, double point) {
+		super();
+		this.id = id;
+		this.question = question;
 		this.answer = answer;
 		this.categoryId = categoryId;
 		this.point = point;

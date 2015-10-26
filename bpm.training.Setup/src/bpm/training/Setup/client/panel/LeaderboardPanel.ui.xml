@@ -23,7 +23,7 @@
 	       					
 	       					<m:MaterialRow>
 	       					    <m:MaterialLink fontSize="1.5" textColor="white" text="1" grid="l2"></m:MaterialLink>
-		       					<m:MaterialLink fontSize="1.5" textColor="white" icon="mdi-hardware-keyboard-alt" grid="l2"></m:MaterialLink>
+		       					<m:MaterialLink fontSize="1.5" textColor="white" icon="keyboard_alt" grid="l2"></m:MaterialLink>
 		       					<m:MaterialLink fontSize="1.5" textColor="white" text="Kristelle Banate" grid="l6"/> 
 	 	       					<m:MaterialLink fontSize="1.5" textColor="white"  text="720" grid="l2" /> 
 	       					</m:MaterialRow>

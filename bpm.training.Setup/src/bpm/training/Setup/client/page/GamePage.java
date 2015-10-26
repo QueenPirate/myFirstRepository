@@ -3,6 +3,8 @@ package bpm.training.Setup.client.page;
 import gwt.material.design.client.ui.MaterialContainer;
 import gwt.material.design.client.ui.MaterialLink;
 import gwt.material.design.client.ui.MaterialLoader;
+import gwt.material.design.client.ui.MaterialModal;
+import gwt.material.design.client.ui.MaterialModal.TYPE;
 import gwt.material.design.client.ui.MaterialNavBrand;
 import gwt.material.design.client.ui.MaterialRow;
 import gwt.material.design.client.ui.MaterialToast;
@@ -13,8 +15,10 @@ import java.util.List;
 
 import bpm.training.Setup.client.ICategoryService;
 import bpm.training.Setup.client.card.CategoryCard;
+import bpm.training.Setup.client.dialog.AddCategoryDialog;
 import bpm.training.Setup.client.panel.LeaderboardPanel;
 import bpm.training.Setup.client.panel.ProfilePanel;
+import bpm.training.Setup.client.panel.UsersPanel;
 import bpm.training.Setup.shared.Category;
 import bpm.training.Setup.shared.User;
 
@@ -37,7 +41,7 @@ public class GamePage extends Composite {
 	}
 	
 	@UiField MaterialContainer conMain;
-	@UiField MaterialLink linkLeaderboard, linkProfile, linkQuiz;
+	@UiField MaterialLink linkLeaderboard, linkProfile, linkQuiz, linkSettings;
 	@UiField MaterialRow rowCards;
 	@UiField MaterialNavBrand nbTitle;
 	
@@ -58,11 +62,9 @@ public class GamePage extends Composite {
 			
 			@Override
 			public void onSuccess(List<Category> result) {
-				// TODO Auto-generated method stub
 				MaterialLoader.showLoading(false);
 				for(Category cat : result){
-					Category category = new Category(cat.getId(), cat.getPicture(), cat.getName(), cat.getColor(), cat.gettxtColor());
-					rowCards.add(new CategoryCard(category));
+					rowCards.add(new CategoryCard(cat));
 				}
 				MaterialAnimator.animate(Transition.SHOW_GRID, rowCards, 0);
 				
@@ -72,15 +74,14 @@ public class GamePage extends Composite {
 			public void onFailure(Throwable caught) {
 				MaterialLoader.showLoading(false);
 				MaterialToast.alert(caught.getMessage());
-				// TODO Auto-generated method stub
-				
 			}
 			
 		});
 		
+		
 	}
 	
-	@UiHandler({"linkLeaderboard","linkProfile","linkQuiz"})
+	@UiHandler({"linkLeaderboard","linkProfile","linkQuiz", "linkSettings"})
 	void onClickLeaderboard(ClickEvent e){
 		
 		if(e.getSource() == linkLeaderboard){
@@ -92,6 +93,9 @@ public class GamePage extends Composite {
 		}else if(e.getSource() == linkQuiz){
 			GamePage.this.removeFromParent();
 			RootPanel.get().add(new GamePage(user));
+		}else if(e.getSource() == linkSettings){
+			conMain.clear();
+			conMain.add(new UsersPanel());
 		}
 		
 	}
@@ -101,6 +105,11 @@ public class GamePage extends Composite {
 		
 		RootPanel.get().clear();
 		RootPanel.get().add(new LoginPage());
+	}
+	
+	@UiHandler("btnAddCategory")
+	void onClickAddCategory(ClickEvent e){
+		MaterialModal.showModal(new AddCategoryDialog(), TYPE.FIXED_FOOTER, false);
 	}
 	
 }

@@ -22,9 +22,10 @@
 		}
 		
 	</ui:style>
-	<m:MaterialColumn addStyleNames="{style.mainRow}" grid="s12 m12 l12" >
-	     	<m:MaterialLink fontSize="1.5" ui:field="lblTitle" addStyleNames="{style.title} darker"/>
-	     	<m:MaterialColumn    ui:field="colChoices" addStyleNames="{style.colChoices} left-align" />
+	<m:MaterialRow addStyleNames="{style.mainRow}" >
+	    
+	     	<m:MaterialLink grid="s12 m12 l12" fontSize="1.5" ui:field="lblTitle" addStyleNames="{style.title} darker"/>
+	     	<m:MaterialColumn grid="s12 m12 l12" ui:field="colChoices" addStyleNames="{style.colChoices} left-align" />
 	     	
-	</m:MaterialColumn>
+	</m:MaterialRow>
 </ui:UiBinder> 
