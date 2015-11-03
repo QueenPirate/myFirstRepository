@@ -106,7 +106,7 @@ public class RegistrationDialog extends Composite {
 				dpBirthDate.setSuccess(" ");
 			}
 		}
-		User user = new User(lblFirstName.getText(), lblLastName.getText(), lblEmailAdd.getText(), dpBirthDate.getDate(), lbCountry.getSelectedItemText(), lblFirstPassword.getText());
+		User user = new User(lblFirstName.getText(), lblLastName.getText(), lblEmailAdd.getText(), dpBirthDate.getDate(), lbCountry.getItemText(lbCountry.getSelectedIndex()), lblFirstPassword.getText());
 		
 		MaterialLoader.showLoading(true);
 		IUserService.Connect.getService().createUser(user, new AsyncCallback<Void>() {

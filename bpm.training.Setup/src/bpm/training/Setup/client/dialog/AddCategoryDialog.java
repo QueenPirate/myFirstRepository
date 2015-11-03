@@ -42,7 +42,7 @@ public class AddCategoryDialog extends Composite {
 	void onClickShowUrlPic(ClickEvent e){
 		
 		imgCategory.setUrl(lblUrlPic.getText());
-		MaterialToast.alert(lbColor.getSelectedItemText() + " " + lbColor.getSelectedIndex());
+		MaterialToast.alert(lbColor.getItemText(lbColor.getSelectedIndex()) + " " + lbColor.getSelectedIndex());
 	}
 	
 	@UiHandler("btnAdd")
@@ -66,7 +66,7 @@ public class AddCategoryDialog extends Composite {
 				lblCategoryName.setError("Provide category name");
 			}else{
 				lblCategoryName.setSuccess(" ");
-				Category category = new Category(lblUrlPic.getText(), lblCategoryName.getText(), lbColor.getSelectedItemText(), "white");
+				Category category = new Category(lblUrlPic.getText(), lblCategoryName.getText(), lbColor.getItemText(lbColor.getSelectedIndex()), "white");
 				addCategory(category);
 			}
 		}
