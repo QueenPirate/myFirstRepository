@@ -15,6 +15,7 @@ public class Bpm_training_Setup implements EntryPoint {
 		// TODO Auto-generated method stub
 		
 		RootPanel.get().add(new  LoginPage());
+		// Version 2
 	}
 	
 }
